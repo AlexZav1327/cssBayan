@@ -45,12 +45,12 @@ body {
   overflow: hidden;
 }
 
-.content > div::before {
+/* .content > a::before {
   content: '';
   border-top: 2px solid lightgray;
   display: block;
-  /* margin: 15px 0; */
-}
+  padding: 15px 0;
+} */
 
 ._container {
   max-width: 40%;
@@ -76,6 +76,12 @@ body {
   font-size: 36px;
 }
 
+a {
+  padding: 10px 0;
+  display: block;
+  border-bottom: 1px solid lightgray;
+}
+
 .subtitle {
   display: flex;
   justify-content: space-between;
@@ -88,15 +94,31 @@ body {
 }
 
 .image {
-  display: block;
   margin: 0 auto;
+  padding: 10px 0;
 }
 
-.image {
+#anchor-1,
+#anchor-2,
+#anchor-3,
+#anchor-4,
+#anchor-5 {
   display: none;
 }
 
-.image-start {
+#anchor-1:target,
+#anchor-2:target,
+#anchor-3:target,
+#anchor-4:target,
+#anchor-5:target {
+  display: block;
+}
+
+#copy-past-id:hover > .image,
+#keep-calm-id:hover > .image,
+#balance-id:hover > .image,
+#where-js-id:hover > .image,
+#relax-id:hover > .image {
   display: block;
 }
 
@@ -116,16 +138,18 @@ body {
   color: black;
 }
 
-.keep-calm:hover > .image,
-.balance:hover > .image,
-.where-js:hover > .image,
-.relax:hover > .image {
-  display: block;
-}
-
+.copy-past:hover * .icon,
 .keep-calm:hover * .icon,
 .balance:hover * .icon,
 .where-js:hover * .icon,
 .relax:hover * .icon {
   transform: rotate(45deg);
 }
+
+.image:target {
+  display: block;
+}
+
+/* a:visited > div {
+  color: black;
+} */
