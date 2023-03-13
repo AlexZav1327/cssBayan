@@ -43,17 +43,13 @@ body {
 .wrapper {
   min-height: 100%;
   overflow: hidden;
-  /* display: flex;
-  flex-direction: column; */
 }
 
-.wrapper > div::after {
+.content > div::before {
   content: '';
-  /* width: 100%; */
-  /* height: 1px; */
   border-top: 2px solid lightgray;
   display: block;
-  margin: 15px 0;
+  /* margin: 15px 0; */
 }
 
 ._container {
@@ -80,12 +76,56 @@ body {
   font-size: 36px;
 }
 
+.subtitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .text {
   font-size: 18px;
-  margin-bottom: 15px;
+  color: blue;
 }
 
 .image {
   display: block;
   margin: 0 auto;
+}
+
+.image {
+  display: none;
+}
+
+.image-start {
+  display: block;
+}
+
+.icon {
+  display: none;
+}
+
+.content {
+  cursor: pointer;
+}
+
+.content:hover * .icon {
+  display: block;
+}
+
+.content:hover * .text {
+  color: black;
+}
+
+.keep-calm:hover > .image,
+.balance:hover > .image,
+.where-js:hover > .image,
+.relax:hover > .image {
+  display: block;
+}
+
+.keep-calm:hover * .icon,
+.balance:hover * .icon,
+.where-js:hover * .icon,
+.relax:hover * .icon {
+  transform: rotate(45deg);
 }
